@@ -1,0 +1,50 @@
+#Guess a 4 digit number game
+import random
+def guess_a_num():
+    guess=input("What is the key : ")
+    if  guess.isdigit():
+        if len(guess) == 4:
+            if len(set(guess)) == 4:
+                return guess
+            else:
+                print("No repeted digits, try again ")
+                return guess_a_num()
+        else:
+            print("guess must have a length of 4, try again")
+            return guess_a_num()
+    else:
+        print("Contains non-numbers, try again ")
+        return guess_a_num()
+
+def generating_no():
+    numm=""
+    while len(numm) != 4 :
+        num = str(random.randint(1,10))
+        if num not in numm:
+            numm += num
+    return numm
+        
+def exist_n_position():
+    exist = 0
+    position = 0
+    for i in range(4):
+        if guessed_no[i] in generated_no:
+            exist += 1
+        if guessed_no[i] == generated_no[i]:
+            position += 1
+    exist_n_position_list.append(f"{guessed_no} : exist:{exist} , position:{position}")
+
+exist_n_position_list = []    
+generated_no = generating_no()
+guesses_count = 0
+print(generated_no)
+while guesses_count < 11 :
+    guessed_no = guess_a_num()
+    guesses_count += 1
+    if guessed_no == generated_no:
+        print(f"You guessed the key:{generated_no}\nIt took you {guesses_count} guesses")
+        break
+    else:
+        exist_n_position()
+        for z in range(guesses_count):
+            print(exist_n_position_list[z])
