@@ -1,0 +1,108 @@
+import random
+def trqy():
+    global q
+    q=input("rock paper scissors ?  ")
+    return q
+def retry():
+    print('''i couldn't understand that :\ , could you please rewrite it.
+          try writing the EXACT spelling and in LOWERCASE :D''')
+    trqy()
+    global qw
+    qw=random.choice(r)
+    print(qw)
+    if qw=="paper":
+        paper()
+    elif qw=="rock":
+        rock()
+    elif qw=="scissors":
+        scissors()
+    
+    
+def rock():
+    if q=="rock":
+        print("tie")
+    elif q=="paper":
+        print("you won this set")
+        global p
+        p=p+1
+    elif q=="scissors":
+        print(":D")
+        global e
+        e=e+1
+    else:
+        retry()
+def paper():
+    if q=="paper":
+        print("tie")
+    elif q=="rock":
+        print(";D")
+        global e
+        e=e+1
+    elif q=="scissors":
+        print("you won this match")
+        global p
+        p+=1
+    else:
+        retry()
+def scissors():
+    if q=="scissors":
+        print("tie")
+    elif q=="paper":
+        print(":D")
+        global e
+        e=e+1
+    elif q=="rock":
+        print("you are good at it")
+        global p
+        p=p+1                        
+    else:
+        retry()
+def ho():
+    global h
+    h=int(input("how many sets of game do you want to play ?    "))
+    return h
+    
+ag="y"  
+q=""    
+r=("rock","paper","scissors")
+print("Hi,My Name is Tacy and today we'll be playing a game ")
+print("                      And the game is rock paper scissors")
+while ag=="y" or "Y":
+    e=0  #no of computer's wins
+    h=1  #no. of sets to be played
+    p=0   #no. of wins of user
+    ho()
+    for  v in range(h):
+        trqy()
+        qw=random.choice(r)
+        print(qw)
+        if qw=="paper":
+            paper()
+        elif qw=="rock":
+            rock()
+        elif qw=="scissors":
+            scissors()
+    if e==p:
+        print("it's a tie :O ") 
+    elif e>p:
+        print("better luck next time ")
+    elif p>e:
+        print("you won ")
+    else:
+        print("I'm sorry ")
+        print("something went wrong ")
+    ag=input("do you want to play again ? y/n   " )
+    if ag=="n":
+        print("Bye!!")
+        break
+    elif ag=="y":
+        print("let's do it once again ")
+        continue
+    else:
+        print("input format not supported")
+        print("we request you to answer in y/n  :D")
+        ag="y"
+else:
+    print("i enjoyed playing with you ")
+    print("hoping to see you soon")
+print("Thank you")
