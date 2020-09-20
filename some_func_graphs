@@ -1,0 +1,88 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def sine(x = np.linspace(-10,10,120)):
+    plt.plot(x,np.sin(x))
+    plt.title("Graph of the function Sine ")
+    plt.xlabel("Some Values")
+    plt.ylabel("Sine of the values")
+    plt.show()
+    
+def cosine(x = np.linspace(-10,10,120)):
+    plt.plot(x,np.cos(x))
+    plt.title("Graph of the function Cosine ")
+    plt.xlabel("Some Values")
+    plt.ylabel("Cosine of the values")
+    plt.show()
+    
+def tan(x = np.linspace(-10,10,120)):
+    plt.plot(x,np.tan(x))
+    plt.title("Graph of the function Tangent ")
+    plt.xlabel("Some Values")
+    plt.ylabel("Tangent of the values")
+    plt.show()
+    
+def fourth(x = np.linspace(-10,10,120)):
+    plt.plot(x,x)
+    plt.title("Graph of the function y = x ")
+    plt.xlabel("x -------> ")
+    plt.ylabel("y -------> ")
+    plt.show()
+    
+def fifth(x = np.linspace(-10,10,120)):
+    plt.plot(x,x**2)
+    plt.title("Graph of the function y = x**2 ")
+    plt.show()
+    
+def sixth(x = np.linspace(-10,10,120)):
+    plt.plot(x,x**3)
+    plt.title("Graph of the function y = x**3 ")
+    plt.show()
+    
+def seventh(x = np.linspace(0,100,120)):    
+    plt.plot(x,x**0.5)
+    plt.title("Graph of the function y = x^1/2 ")
+    plt.show()
+    
+def eighth(x = np.linspace(-10,10,120)):
+    plt.plot(x,2**x)
+    plt.title("Graph of the function y = 2^x ")
+    plt.show()
+    
+def ninth(x = np.linspace(-10,10,120)):
+    plt.plot(x,1/x)
+    plt.title("Graph of the function y = 1/x")
+    plt.show()
+    
+def tenth(x = np.linspace(-10,10,120)):
+    plt.plot(x,1/x**2)
+    plt.title("Graph of the function y = 1/x**2")
+    plt.show()   
+    
+graph_list = ["1. Sine\t","2. Cosine\t","3. Tangent\t","4. y= x\t","5. y= x^2\t",
+              "6. y= x^3\t","7. y= x^1/2\t","8. y= 2^x\t","9. y=1/x\t","10. y= 1/x**2"]
+
+for z in graph_list:
+    print(z)
+
+Graph = input("Enter no of the function's graph you want to take a look at :")
+if Graph == "1":
+    sine()
+elif Graph == "2":
+    cosine()
+elif Graph =="3":
+    tan()
+elif Graph =="4":
+    fourth()
+elif Graph == "5":
+    fifth()
+elif Graph =="6":
+    sixth()
+elif Graph=="7":
+    seventh()
+elif Graph=="8":
+    eighth()
+elif Graph=="9":
+    ninth()
+elif Graph=="10":
+    tenth()
