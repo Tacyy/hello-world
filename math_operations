@@ -1,0 +1,94 @@
+import math
+def mathematics():
+    print("you want to calculate.......")
+    for i in list2:
+        print(i)
+    start2=int(input("Enter the number of the function you want to use :"))
+    if start2==1:
+        q=float(input("enter the no. whose square root you wanna compute: "))
+        r=math.sqrt(q)
+        print(r)
+    elif start2==2:
+        w=float(input("no. whose logrithm you wanna compute: "))
+        e=float(input("to what base you wanna compute the log "))
+        t=math.log(w,e)
+        print(t)
+    elif start2==3:
+        y=float(input("no. you want to raise the power of  :  "))
+        u=float(input("power to which you want to raise the number "))
+        i=math.pow(y,u)
+        print(i)
+    elif start2==4:
+        o=float(input("you want to calculate the sine of  : "))
+        p=math.sin(o)
+        print(p)
+    elif start2==5:
+        a=float(input("you want to calculate the cosine of : "))
+        s=math.cos(a)
+        print(s)
+    elif start2==6:
+        d=float(input("you want to calculate the tan of :  "))
+        f=math.tan(d)
+        print(f)
+    elif start2==7:
+        g=int(input("you want to calculate the factorial of : "))
+        h=math.factorial(g)
+        print(h)
+    elif start2==8:
+        j=float(input("value in radians to convert to degrees: "))
+        k=math.degrees(j)
+        print(k)
+    elif start2==9:
+        l=float(input("value in degrees to convert to radians:  "))
+        z=math.radians(l)
+        print(z)
+    elif start2==10:
+        print("enter the numbers below whose gcd you want to compute ")
+        x=int(input("enter the first number : "))
+        c=int(input("enter the second number :  "))
+        v=math.gcd(x,c)
+        print(v)
+    elif start2==11:
+        m=0
+        b=int(input("on how many numbers you want to perform the addition : "))
+        for x1 in range(b):                                                      # you can also use sum()
+            n=float(input("enter a number to add :  "))                         
+            m+=n
+        print(m)
+    elif start2==12:
+        q1=float(input("enter the first number : "))
+        q2=float(input("enter the second number:  "))
+        q3=print("the subtraction is",q1-q2)
+        print(q3)
+    elif start2==13:
+        q4=float(input("enter the number whose absolute value you want : "))
+        q5=math.fabs(q4)
+        print(q5)
+    elif start2==14:
+        q6=0
+        q7=int(input("on how many numbers you want to perform the multiplication : "))
+        for x1 in range(q7):
+            q8=float(input("enter a number to multiply :  "))
+            q6*=q8
+        print(q6)
+    elif start2==15:
+        q9=float(input("enter the divident :"))
+        q0=float(input("enter the divisor : "))
+        w1=q9%q0
+        print(w1)
+    elif start2==16:
+        w2=float(input("enter the divident: "))
+        w3=float(input("enter the divisor: "))
+        w4=w2/w3
+        print(w4)
+    else:
+        print("you want me to compute what ?  ")
+        mathematics()
+qwe="y"
+ while qwe=="y":
+            mathematics()
+            qwe=input("you wanna do more calculations .... y/n :  ")
+        else:
+            for i in list1:
+                print(i)
+            start=int(input("Enter the number you want to explore ...  "))
