@@ -1,0 +1,389 @@
+import random
+import math
+def mathematics():
+    print("you want to calculate.......")
+    for i in list2:
+        print(i)
+    start2=int(input("Enter the number of the function you want to use :"))
+    if start2==1:
+        q=float(input("enter the no. whose square root you wanna compute: "))
+        r=math.sqrt(q)
+        print(r)
+    elif start2==2:
+        w=float(input("no. whose logrithm you wanna compute: "))
+        e=float(input("to what base you wanna compute the log "))
+        t=math.log(w,e)
+        print(t)
+    elif start2==3:
+        y=float(input("no. you want to raise the power of  :  "))
+        u=float(input("power to which you want to raise the number "))
+        i=math.pow(y,u)
+        print(i)
+    elif start2==4:
+        o=float(input("you want to calculate the sine of  : "))
+        p=math.sin(o)
+        print(p)
+    elif start2==5:
+        a=float(input("you want to calculate the cosine of : "))
+        s=math.cos(a)
+        print(s)
+    elif start2==6:
+        d=float(input("you want to calculate the tan of :  "))
+        f=math.tan(d)
+        print(f)
+    elif start2==7:
+        g=int(input("you want to calculate the factorial of : "))
+        h=math.factorial(g)
+        print(h)
+    elif start2==8:
+        j=float(input("value in radians to convert to degrees: "))
+        k=math.degrees(j)
+        print(k)
+    elif start2==9:
+        l=float(input("value in degrees to convert to radians:  "))
+        z=math.radians(l)
+        print(z)
+    elif start2==10:
+        print("enter the numbers below whose gcd you want to compute ")
+        x=int(input("enter the first number : "))
+        c=int(input("enter the second number :  "))
+        v=math.gcd(x,c)
+        print(v)
+    elif start2==11:
+        m=0
+        b=int(input("on how many numbers you want to perform the addition : "))
+        for x1 in range(b):
+            n=float(input("enter a number to add :  "))
+            m+=n
+        print(m)
+    elif start2==12:
+        q1=float(input("enter the first number : "))
+        q2=float(input("enter the second number:  "))
+        q3=print("the subtraction is",q1-q2)
+        print(q3)
+    elif start2==13:
+        q4=float(input("enter the number whose absolute value you want : "))
+        q5=math.fabs(q4)
+        print(q5)
+    elif start2==14:
+        q6=0
+        q7=int(input("on how many numbers you want to perform the multiplication : "))
+        for x1 in range(q7):
+            q8=float(input("enter a number to multiply :  "))
+            q6*=q8
+        print(q6)
+    elif start2==15:
+        q9=float(input("enter the divident :"))
+        q0=float(input("enter the divisor : "))
+        w1=q9%q0
+        print(w1)
+    elif start2==16:
+        w2=float(input("enter the divident: "))
+        w3=float(input("enter the divisor: "))
+        w4=w2/w3
+        print(w4)
+    else:
+        print("you want me to compute what ?  ")
+        mathematics()
+Name=input("Hi , What shall I call you ?     ")
+print("Let's get started",Name,".....")
+thecontroller="Y"
+while thecontroller=="Y":
+    list1=["1.some mathematical calculations? ","2.you bored ?","3.an inspirational quote ?","4.do nothing"]
+    list2=["1.square root","2.natural logaritm","3.number raised to a power","4.sine (write angle in radians)","5.cosine (write angle in radians)","6.tan (write angle in radians)","7.factorial","8.convert radian to degree","9.convert degree to radian","10.Greatest commmon divisor","11.Add numbers","12.Subtract two number","13.Absolute value","14.multiply numbers","15.remainder of division","16.divide two numbers"]
+    list3=["1.Play Island Adventure","2.Play Rock-Paper-Scissors"]
+    
+    print("I can help you with the following:")
+    for i in list1:
+        print(i)
+    start=int(input("Enter the number you want to explore ...  "))
+    qwe="y"
+    if start==1:
+        while qwe=="y":
+            mathematics()
+            qwe=input("you wanna do more calculations .... y/n :  ")
+        else:
+            for i in list1:
+                print(i)
+            start=int(input("Enter the number you want to explore ...  "))
+    elif start==2:
+        for w in list3:
+            print(w)
+        start3=int(input("enter the number of the activity you wanna try: "))
+        if start3==1:
+            #to suspend time
+            import time
+            #in what ways user can respond
+            opt_a = ["A","a"]
+            opt_b = ["B","b"]
+            opt_c = ["C","c"]
+            yes   = ["Y","y","yes","Yes","YES"]
+            no    = ["N","n","no","No","NO"]
+            #warning
+            warning="Use 'a', 'b' or 'c' to choose any proceeding option.\n"
+            #object needed 
+            honey = 0
+            #To start game
+            print("Welcome to your own Island Adventure. Let's Begin!\n")
+            #storyline
+            def intro():
+                time.sleep(1)
+                print("""After partying hard last night, you wake up in the morning, with a pounding 
+                headache, on the shore of a beach in a small island.
+                You will: \n""")
+                time.sleep(0.5)
+                print("""A. Go to the North side of the beach.
+                B. Walk into the Forest.
+                C. Go to the South side of the beach.\n""")
+                choice = input(">>> ") #choose a option
+                if choice in opt_a :
+                    option_north()
+                elif choice in opt_b :
+                    option_forest()
+                elif choice in opt_c :
+                    option_south()
+                else:
+                    print (warning)
+                    time.sleep(0.5)
+                    intro()
+            #starting point again
+            def back():
+                print("You have arrived back to the starting place. Now you will go to: \n")
+                time.sleep(0.5)
+                print("""A. The North side of the beach.
+                B. The Forest.
+                C. The South side of the beach.\n""")
+                choice = input(">>> ") #choose a option
+                if choice in opt_a :
+                    option_north()
+                elif choice in opt_b :
+                    option_forest()
+                elif choice in opt_c :
+                    option_south()
+                else:
+                    print (warning)
+                    time.sleep(0.5)
+                    back()
+            #to start game once again
+            def again():
+                y_n=input("""\nWould you like to take a another try with different choices?
+                Y/N?
+                >>>""")
+                if y_n in yes :
+                    intro()
+                else:
+                    print("Welp! See ya!!")
+            #north's storyline
+            def option_north() :
+                global honey
+                if honey == 1 :
+                    time.sleep(0.5)
+                    print("There is nothing here. You returned back\n")
+                    back()
+                else:
+                    time.sleep(0.5)
+                    print("""You walk to the North. You smell something and goes after the smell.
+                    You see a case of honey. Will you pick up the honey case? y/n \n """)
+                    choice = input(">>> ") #make your choice
+                    if choice in yes :
+                        honey = honey + 1
+                        time.sleep(0.5)
+                        print("""You have picked up the honey case. You went back to the starting place.\n""")
+                        back()
+                    else:
+                        time.sleep(0.5)
+                        print("The honey case seems heavy. You went back to the starting place.\n")
+                        back()
+                #forest's storyline
+                def option_forest() :
+                    global honey
+                    time.sleep(0.5)
+                    print("""As you walk deep into the forest, you encounter a bear and it's very angry.
+                    You will :\n""")
+                    if honey > 0:
+                        time.sleep(0.5)
+                        print("""A. Try to talk to the bear.
+                        B. Run away.
+                        C. Throw honey.\n""")
+                        choice = input(">>> ") #choose a option
+                        if choice in opt_a :
+                            time.sleep(0.5)
+                            print("That's a horrible choice. \n")
+                            print("GAME OVER!!")
+                            time.sleep(0.5)
+                            again() 
+                        elif choice in opt_b :
+                            time.sleep(0.5)
+                            print("You RAN away. But you leg cramped.\n")
+                            print("GAME OVER!!\n")
+                            time.sleep(0.5)
+                            again()
+                        elif choice in opt_c :
+                            time.sleep(0.5)
+                            print("""The bear sniffs the honey and starts licking it.
+                            Now is the good time to sneak away.
+                            You cleared the forest. Now you can see buidings and people.
+                            YOU SURVIVED""")
+                        else:
+                            print (warning)
+                            time.sleep(0.5)
+                            option_forest()
+                    else :
+                        time.sleep(0.5)
+                        print("""A. Try to talk to the bear.
+                        B. Run away.\n""")
+                        choice = input(">>> ") #choose a option
+                        if choice in opt_a :
+                            time.sleep(0.5)
+                            print("That's a horrible choice. \n")
+                            print("GAME OVER!!\n")
+                            time.sleep(0.5)
+                            again()
+                        elif choice in opt_b :
+                            time.sleep(0.5)
+                            print("You RAN away. You reach back to the starting point.\n")
+                            time.sleep(0.5)
+                            back()
+                        else:
+                            print (warning)
+                            time.sleep(0.5)
+                            option_forest()
+            #south's storyline
+            def option_south():
+                time.sleep(0.5)
+                print("You walk to the south side. You see rock, shell and sand.")
+                print("You will : \n")
+                time.sleep(0.5)
+                print("""A. Build a sand castle.
+                B. Turn back\n""")
+                choice = input(">>> ") #choose a option
+                if choice in opt_a :
+                    time.sleep(0.5)
+                    print("You got bored. You head back.\n")
+                    back()
+                elif choice in opt_b :
+                    time.sleep(0.5)
+                    print("Nothing to do much. \n")
+                    back()
+                else:
+                    print (warning)
+                    time.sleep(0.5)
+                    option_south()
+            #game start
+            intro()
+        elif start3==2:
+            
+            def trqy():
+                global q
+                q=input("rock paper scissors ?  ")
+                return q
+            def retry():
+                print('''i couldn't understand that :\ , could you please rewrite it.
+                      try writing the EXACT spelling and in LOWERCASE :D''')
+                trqy()
+                global qw
+                qw=random.choice(r)
+                print(qw)
+                if qw=="paper":
+                    paper()
+                elif qw=="rock":
+                    rock()
+                elif qw=="scissors":
+                    scissors()  
+            def rock():
+                if q=="rock":
+                    print("tie")
+                elif q=="paper":
+                    print("you won this set",Name)
+                    global p
+                    p=p+1
+                elif q=="scissors":
+                    print(":D")
+                    global e
+                    e=e+1
+                else:
+                    retry()
+            def paper():
+                if q=="paper":
+                    print("tie")
+                elif q=="rock":
+                    print(";D")
+                    global e
+                    e=e+1
+                elif q=="scissors":
+                    print("you won this set",Name)
+                    global p
+                    p+=1
+                else:
+                    retry()
+            def scissors():
+                if q=="scissors":
+                    print("tie")
+                elif q=="paper":
+                    print(":D")
+                    global e
+                    e=e+1
+                elif q=="rock":
+                    print("ahh ! I thought I got this one")
+                    global p
+                    p=p+1                        
+                else:
+                    retry()
+            def ho():
+                global h
+                h=int(input("how many sets of game do you want to play ?    "))
+                return h
+            ag="y"  
+            q=""    
+            r=("rock","paper","scissors")
+            print("\tHi",Name,"Happy to see you here, let's get started .")
+            while ag=="y" or "Y":
+                e=0                          #no of computer's wins
+                h=1                          #no. of sets to be played
+                p=0                          #no. of wins of user
+                ho()                         #inputs the number of sets user wanna play
+                for  v in range(h):          #h is the input variable of ho() 
+                    trqy()                   #inputs rps in variable q
+                    qw=random.choice(r)      # r is a tuple containing r,p,s
+                    print(qw)
+                    if qw=="paper":
+                        paper()
+                    elif qw=="rock":
+                        rock()
+                    elif qw=="scissors":
+                        scissors()
+                userwinrps=("I wasn't that bad at the game . Was I ?!!","Felicitations !!","arrrg , not again ","You won !!")
+                if e==p:
+                    print("it's a tie :O ") 
+                elif e>p:
+                    print("better luck next time ")
+                elif p>e:
+                    print(random.choice(userwinrps))
+                else:                         #bilkul ricks nahi lenne ka
+                    print("I'm sorry ")
+                    print("something went wrong ")
+                ag=input("do you want to play again ? y/n   " )
+                if ag=="n":
+                    print("Bye!!")
+                    break
+                elif ag=="y":
+                    print("let's do it once again ")
+                    continue
+                else:
+                    print("input format not supported")
+                    print("we request you to answer in y/n  :D")
+                    ag="y"
+            else:
+                print("I enjoyed playing with you n hope you did too ")
+                print("See you ")
+            print(":D ")
+    elif start==3:
+        inspiration_list=["Even if I'm slow I'll walk with my own feet , because I know this path is mine to take , I will never lose my dream --BTS","“If I had a chance to improve every aspect of myself, then I would work hard to make it happen rather than just sitting idly by.” – Jungkook,BTS","“The dawn right before the sun rises is the darkest.” – BTS, “Tomorrow”","“The morning will come again. No darkness, no season is eternal.” – BTS, “Spring Day”","“Go on your path, even if you live for a day. Do something. Put away your weakness.” – BTS, “No More Dream”","“Life is a sculpture that you cast as you make mistakes and learn from them.” — RM ,BTS","“Your presence can give happiness. I hope you remember that.” – Jin,BTS","“Don’t be trapped in someone else’s dream.” – V , BTS","“In the middle of the road, in the moment you want to give up, shout out even louder: “So what?” – BTS, “So What”","“Effort makes you.\n You will regret someday if you don’t do your best now.\n Don’t think it’s too late but keep working on it.\n It takes time, but there’s nothing that gets worse due to practicing.\n So practice.\n You may get depressed, but it’s evidence that you are doing good.” – Jungkook,BTS","“I have come to love myself for who I am, for who I was, and for who I hope to become.” — RM, BTS","“There Are No Limits To What You Can Accomplish, Except The Limits You Place On Your Own Thinking.” – Brian Tracy","“Fake It Until You Make It! Act As If You Had All The Confidence You Require Until It Becomes Your Reality.” – Brian Tracy","“Imagine Your Life Is Perfect In Every Respect; What Would It Look Like?” – Brian Tracy","“We May Encounter Many Defeats But We Must Not Be Defeated.” – Maya Angelou","“People Who Are Crazy Enough To Think They Can Change The World, Are The Ones Who Do.” – Rob Siltanen","“It’s Not Whether You Get Knocked Down, It’s Whether You Get Up.” – Vince Lombardi","“Don’t Let Yesterday Take Up Too Much Of Today.” – Will Rogers","“The Way Get Started Is To Quit Talking And Begin Doing.” – Walt Disney","I feel that luck is preparation meeting opportunity. -- Oprah Winfrey","Don't turn away from what's painful. Examine it. Challenge it. -- Steven Spielberg","Pursuing what you believe in already constitutes success regardless of the outcome. -- Daniel Lubetzky","If something is important enough, even if the odds are against you, you should still do it. -- Elon Musk","Success is never accidental. -- Jack Dorsey","Be the best, not the first. -- Tim Cook","You shouldn't focus on why you can't do something, which is what most people do. You should focus on why perhaps you can, and be one of the exceptions. -- Steve Case","If you want to live a happy life tie it to a goal, not to people or things. -- Albert Einstein","Determine never to be idle. No person will have the occasion to complain of the want of time, who never loses any. -- Thomas Jefferson","Everything comes to him who hustles while he waits. -- Thomas Edison","Don't you dare underestimate the power of your own instinct. -- Barbara Corcoran","“Success is most often achieved by those who don’t know that failure is inevitable.” -- Coco Chanel","“In order to be irreplaceable one must always be different.” -- Coco Chanel","“Don’t spend time beating on a wall, hoping to transform it into a door.” -- Coco Chanel","“If you can’t appreciate what you’ve got, you better get what you appreciate.”-- Henry Higgins ","I think baking cookies is equal to Queen Victoria running an empire. There's no difference in how seriously you take the job. -- Martha Stewart","Everything you’ve ever wanted is on the other side of fear. —George Addair","When I hear somebody sigh, ‘Life is hard,’ I am always tempted to ask, ‘Compared to what?’” -- Sydney Harris","Certain things catch your eye, but pursue only those that capture the heart. -- Ancient Indian Proverb","A person who never made a mistake never tried anything new. -- Albert Einstein","I have learned over the years that when one’s mind is made up, this diminishes fear. -- Rosa Parks","Be not afraid of life. Believe that life is worth living, and your belief will help create the fact. -- William James","Change your thoughts and you change your world. -- Norman Vincent Peale","Don’t judge each day by the harvest you reap but by the seeds that you plant. -- Robert Louis Stevenson","The most common way people give up their power is by thinking they don’t have any. -- Alice Walker","I am not a product of my circumstances. I am a product of my decisions. -- Stephen Covey","Strive not to be a success, but rather to be of value. -- Albert Einstein","Twenty years from now you will be more disappointed by the things that you didn’t do than by the ones you did do, so throw off the bowlines, sail away from safe harbor, catch the trade winds in your sails. Explore, Dream, Discover. -- Mark Twain","Whatever the mind of man can conceive and believe, it can achieve. -- Napoleon Hill","Too many of us are not living our dreams because we are living our fears. -- Les Brown","None of us is as smart as all of us. -- Ken Blanchard","If you look at what you have in life, you’ll always have more. If you look at what you don’t have in life, you’ll never have enough. -- Oprah Winfrey","“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.”― Helen Keller","“Do what you can, with what you have, where you are.”― Theodore Roosevelt","“Everything you can imagine is real.”― Pablo Picasso","“You have brains in your head.\n You have feet in your shoes.\n You can steer yourself any direction you choose.\n You're on your own.\n And you know what you know.\n And YOU are the one who'll decide where to go...”― Dr. Seuss","Whether you think you can or you think you can’t, you’re right. -- Henry Ford","Perfection is not attainable, but if we chase perfection we can catch excellence. -- Vince Lombardi","“Be the change that you wish to see in the world.” ― Mahatma Gandhi.","Doubt kills more dreams than failure ever will.","“You've gotta dance like there's nobody watching,\tLove like you'll never be hurt,\tSing like there's nobody listening,\tAnd live like it's heaven on earth.”- William W. Purkey","“No one can make you feel inferior without your consent.”― Eleanor Roosevelt","“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”― Marilyn Monroe","“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”― Albert Einstein","“Yesterday is history, tomorrow is a mystery, today is a gift of God, which is why we call it the present.”― Bill Keane","“I am enough of an artist to draw freely upon my imagination. Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.”― Albert Einstein"]
+        continue_inspiration="y"
+        while continue_inspiration=="y":
+            print(random.choice(inspiration_list))
+            continue_inspiration=input("one more quote ? y/n :") 
+    elif start==4: 
+        thecontroller="w"
+        print("Okay,see you")
+print("Tata!!")
